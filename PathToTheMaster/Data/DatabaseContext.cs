@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PathToTheMaster.Web.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,23 @@ namespace PathToTheMaster.Web.Data
             Database.EnsureCreated();
             Database.Migrate();
         }
+
+        public DbSet<Patient> Patient { get; set; }
+
+        public DbSet<SalePack> SalePack { get; set; }
+
+        public DbSet<Package> Package { get; set; }
+
+        public DbSet<Laboratory> Laboratory { get; set; }
+
+        public DbSet<Group> Group { get; set; }
+
+        public DbSet<City> City { get; set; }
+
+        public DbSet<AnalysisNorm> AnalysisNorm { get; set; }
+
+        public DbSet<Analysis> Analysis { get; set; }
+
+        public DbSet<Addresses> Addresses { get; set; }
     }
 }
